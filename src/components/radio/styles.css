@@ -1,0 +1,17 @@
+.radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    width: fit-content;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio:has(input:checked) {
+    border: 1px solid #cccccc;
+}

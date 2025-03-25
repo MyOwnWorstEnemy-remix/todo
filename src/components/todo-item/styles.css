@@ -1,0 +1,69 @@
+.todo-item {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.todo-item__checkbox {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todo-item__checkbox input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #14684e;
+    position: relative;
+}
+
+.todo-item__checkbox input:checked::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    margin-top: -7px;
+    left: 50%;
+    margin-left: -7px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #38af79;
+}
+
+.todo-item__checkbox:hover input,
+.todo-item__checkbox:focus input {
+    border: 1px solid #851241;
+}
+
+.todo-item__checkbox:hover input:checked::after,
+.todo-item__checkbox:focus input:checked::after {
+    background-color: #851241;
+}
+
+.todo-item__checkbox:has(input:checked) {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.todo-item__remove-button {
+    background-color: transparent;
+    border: 1px solid #38af79;
+    color: #38af79;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-item__remove-button:hover,
+.todo-item__remove-button:focus {
+    outline: none;
+    border: 1px solid #851241;
+    color: #851241;
+}
