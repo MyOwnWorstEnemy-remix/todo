@@ -8,7 +8,7 @@ import Radio from '../components/radio/radio';
 import './App.css';
 
 function App() {
-  const todos = useSelector((state: RootState) => state.todos.todos);
+  const todos = useSelector((state: RootState) => state.todos);
   const [isChecked, setIsChecked] = useState({all: true, done: false, active: false});
   const [filteredTodos, setFilteredTodos] = useState<Todo[]>([]);
 
